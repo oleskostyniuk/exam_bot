@@ -1,17 +1,38 @@
 {
-  "name": "exam_bot",
+  "name": "scraper",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "canvas": "^2.5.0",
+    "encoding": "^0.1.12",
+    "jsdom": "^14.0.0",
+    "telegraf": "^3.29.0",
+    "request": "latest",
+    "utf-8-validate": "^5.0.2",
+    "xmlhttprequest": "^1.8.0"
   },
-  "engines": {
-    "node": "10.15.3"
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "now": "^14.0.2"
+  },
+  "scripts": {
+    "test": "echo test",
+    "start": "node schedulesParser.js",
+    "lint": "eslint ../../Desktop/Scraper-master",
+    "pretest": "npm run lint",
+    "deploy": "now alias --token=$ENV_ZEIT_KEY Scrapper-$TRAVIS_BRANCH.now.sh",
+    "build": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EgoTkachenco/Scraper.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "node-telegram-bot-api": "^0.30.0"
-  }
+  "bugs": {
+    "url": "https://github.com/EgoTkachenco/Scraper/issues"
+  },
+  "homepage": "https://github.com/EgoTkachenco/Scraper#readme"
 }

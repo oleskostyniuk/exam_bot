@@ -1,18 +1,10 @@
 language: node_js
 node_js:
-  - 10.15.3
-cache: npm
-install:
+  - "11.10.0"
+before_script:
   - npm ci
-
 script:
+  - npm run lint
   - npm run test
-    - npm run build
-
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-
-  on:
-    branch: master
+  - npm run build
+  - now --token=$ENV_ZEIT_KEY -e BOT_TOKEN=$BOT_TOKEN
