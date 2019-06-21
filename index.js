@@ -34,7 +34,7 @@ bot.hears(/^[А-ЯІа-яі]{2}-[1-9а-яі]{2,5}$/, (ctx) => start(ctx.message.
     .catch(() => ctx.reply('We can`t find this schedule :(')));
 //bot.launch();
 
-bot.telegram.setWebhook('https://exambot.kostyniukoles.now.sh/');
+bot.telegram.setWebhook('https://exambot.kostyniukoles.now.sh');
 
 //bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 
