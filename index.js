@@ -36,6 +36,6 @@ bot.hears(/^[А-ЯІа-яі]{2}-[1-9а-яі]{2,5}$/, (ctx) => start(ctx.message.
 
 bot.telegram.setWebhook('https://exambot.kostyniukoles.now.sh');
 
-//bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
+bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 
 module.exports = bot.webhookCallback('/');
