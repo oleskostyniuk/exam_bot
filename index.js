@@ -32,10 +32,10 @@ bot.hears(/^[А-ЯІа-яі]{2}-[1-9а-яі]{2,5}$/, (ctx) => start(ctx.message.
         ctx.reply(split[1]);
     })
     .catch(() => ctx.reply('We can`t find this schedule :(')));
-//bot.launch();
+
 
 bot.telegram.setWebhook('https://scrapper.kostyniukoles.now.sh');
-
+//bot.launch();
 //bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 
 module.exports = bot.webhookCallback('/');
