@@ -35,7 +35,7 @@ bot.hears(/^[А-ЯІа-яі]{2}-[1-9а-яі]{2,5}$/, (ctx) => start(ctx.message.
 
 
 bot.telegram.setWebhook('https://scrapper.kostyniukoles.now.sh');
-//bot.launch();
-//bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 
-module.exports = bot.webhookCallback('/');
+bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
+//bot.launch();
+//module.exports = bot.webhookCallback('/');
