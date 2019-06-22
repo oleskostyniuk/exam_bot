@@ -38,4 +38,4 @@ bot.telegram.setWebhook('https://scrapper.kostyniukoles.now.sh');
 
 bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 //bot.launch();
-//module.exports = bot.webhookCallback('/');
+module.exports = bot.webhookCallback('/');
