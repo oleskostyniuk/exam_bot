@@ -31,11 +31,11 @@ bot.hears(/^[А-ЯІа-яі]{2}-[1-9а-яі]{2,5}$/, (ctx) => start(ctx.message.
         ctx.reply(split[0]);
         ctx.reply(split[1]);
     })
-    .catch(() => ctx.reply('We can`t find this schedul :(')));
-
-
-bot.telegram.setWebhook('https://scrapper.kostyniukoles.now.sh');
-
-bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
+    .catch(() => ctx.reply('We can`t find this schedule :(')));
 //bot.launch();
+
+bot.telegram.setWebhook('https://exambot.kostyniukoles.now.sh');
+
+//bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
+
 module.exports = bot.webhookCallback('/');
